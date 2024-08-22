@@ -19,8 +19,10 @@ public class ProductModel extends RepresentationModel <ProductModel> implements 
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idProduct;
     private String nome;
-    private String descricao;
-    private BigDecimal capacidade;
+    private String classificacao;
+    private String tipo;
+    private BigDecimal preco;
+    private BigDecimal tamanho;
 
     public UUID getIdProduct() {
         return idProduct;
@@ -38,19 +40,35 @@ public class ProductModel extends RepresentationModel <ProductModel> implements 
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public BigDecimal getCapacidade() {
-        return capacidade;
+    public String getClassificacao() {
+        return classificacao;
     }
 
-    public void setCapacidade(BigDecimal capacidade) {
-        this.capacidade = capacidade;
+    public void setClassificacao(String classificacao) {
+        this.classificacao = classificacao;
+    }
+
+    public BigDecimal getPreco() {
+        return preco;
+    }
+
+    public void setPreco(BigDecimal preco) {
+        this.preco = preco;
+    }
+
+    public BigDecimal getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(BigDecimal tamanho) {
+        this.tamanho = tamanho;
     }
 }
